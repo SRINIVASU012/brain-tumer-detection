@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroScan AI | Brain Tumor Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-brain"></i> <span>NEURO<span>SCAN</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-target="upload">Upload MRI</a></li>
+                <li><a href="#" class="nav-link" data-target="result">Results</a></li>
+                <li><a href="#" class="nav-link" data-target="about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>Next-Gen Tumor Detection</h1>
+                <p>Utilizing Hybrid Fuzzy-Logic Segmentation and CNN Classification for 98% Diagnostic Accuracy.</p>
+                <button class="btn-primary" onclick="navigateTo('upload')">Start Diagnosis</button>
+            </div>
+        </section>
+
+        <section id="upload" class="page">
+            <div class="container">
+                <h2>MRI Analysis Portal</h2>
+                <div class="upload-box" id="drop-zone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop MRI Scan or Click to Browse</p>
+                    <input type="file" id="file-input" hidden accept="image/*">
+                    <button class="btn-secondary">Select Image</button>
+                </div>
+                <div id="preview-container" class="hidden">
+                    <img id="mri-preview" src="" alt="Preview">
+                    <button class="btn-primary" id="analyze-btn">Run AI Analysis</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="result" class="page">
+            <div class="container">
+                <h2>Diagnostic Report</h2>
+                <div class="result-grid">
+                    <div class="result-card">
+                        <h3>Classification</h3>
+                        <p id="tumor-type" class="highlight">Pending...</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Confidence</h3>
+                        <p id="confidence-level">--</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Tumor Size</h3>
+                        <p id="tumor-size">--</p>
+                    </div>
+                </div>
+                <div class="scan-visual">
+                    <div class="scan-line"></div>
+                    <img id="analyzed-img" src="" alt="Scan result">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page">
+            <div class="container text-content">
+                <h2>About the Project</h2>
+                <p>This system integrates <strong>Fuzzy Thresholding</strong> to precisely detect tumor regions and <strong>Convolutional Neural Networks (CNN)</strong> to classify findings into Glioma, Meningioma, Pituitary, or No Tumor.</p>
+                <div class="tech-stack">
+                    <span><i class="fab fa-python"></i> CNN Model</span>
+                    <span><i class="fas fa-microchip"></i> Fuzzy Logic</span>
+                    <span><i class="fas fa-bolt"></i> Real-time Processing</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NeuroScan AI Project | Medical Research Interface</p>
+        <div class="footer-links">
+            <a href="#"><i class="fab fa-github"></i> Source</a>
+            <a href="#"><i class="fas fa-file-alt"></i> Documentation</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
