@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload MRI | Next-Gen Tumor Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Next-Gen Tumor Detection</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upload.html" class="active">Upload MRI</a></li>
+                <li><a href="result.html">Result</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="upload-page-container">
+        <div class="upload-card card">
+            <div class="upload-header">
+                <i class="fas fa-file-medical"></i>
+                <h2>MRI Scan Analysis</h2>
+                <p>Upload a clear MRI image (JPEG/PNG) to begin the CNN detection process.</p>
+            </div>
+
+            <div class="drop-zone" id="drop-zone">
+                <div class="drop-zone-content">
+                    <i class="fas fa-cloud-upload-alt pulse"></i>
+                    <p>Drag and drop your MRI scan here</p>
+                    <span>or</span>
+                    <button class="btn-outline">Browse Files</button>
+                    <input type="file" id="file-input" hidden accept="image/*">
+                </div>
+            </div>
+
+            <div id="preview-section" class="hidden">
+                <div class="preview-box">
+                    <img id="mri-preview" src="" alt="Selected MRI">
+                    <div class="scan-effect"></div>
+                </div>
+                <div class="upload-actions">
+                    <button id="cancel-btn" class="btn-secondary">Remove</button>
+                    <button id="analyze-btn" class="btn-primary">Run to Diagnosis</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Next-Gen Tumor Detection Project | Medical Interface</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
